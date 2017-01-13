@@ -15,10 +15,7 @@ const withMutation = graphql(loginUser, {
 });
 
 const mapStateToProps = state => ({
-  token: state.user.token,
-  loading: state.login.loading,
-  errorMessage: state.login.errorMessage,
-  successMessage: state.login.successMessage,
+  ...state.login,
 });
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
