@@ -8,7 +8,7 @@ import ApolloClient, { createNetworkInterface } from 'apollo-client';
 import { ApolloProvider } from 'react-apollo';
 import createLogger from 'redux-logger';
 
-import env from '../config/development.json';
+import config from '../config.json';
 
 import App from './App';
 import './index.css';
@@ -19,7 +19,7 @@ import registerReducer from './reducers/register';
 import userReducer from './reducers/user';
 
 const networkInterface = createNetworkInterface({
-  uri: env.graphqlServerUri,
+  uri: config.graphQLServiceUri,
 });
 
 networkInterface.use([{
