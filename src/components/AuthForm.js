@@ -83,7 +83,7 @@ const AuthForm = ({
 
     <div>
       {loading && (
-        <div>Loading...</div>
+        <div style={{ margin: 20 }}>Loading...</div>
       )}
 
       {successMessage && (
