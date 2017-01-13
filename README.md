@@ -14,7 +14,7 @@ An authentication flow example using GraphQL as a service provided by [Scaphold.
 
 ![Scaphold.io My API](https://s29.postimg.org/4ndv1h907/Screenshot_2017_01_13_10_09_57.png)
 
-- Change the `config.json` file based on the root directory and change the `graphQLServerUri` to your endpoint address.
+- Open the `config.json` file based on the root directory and change the `graphQLServiceUri` to your Scaphold app endpoint.
 
 > You dont need to create any schema. Scaphold.io already provides a User schema designed for the needs of this project.
 
