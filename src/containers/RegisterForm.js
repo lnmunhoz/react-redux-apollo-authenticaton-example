@@ -1,21 +1,8 @@
 import { graphql } from 'react-apollo';
-import gql from 'graphql-tag';
 import { connect } from 'react-redux';
 import { createUserRequest, createUserSuccess, createUserError } from '../actions/register';
-
+import { createUser } from '../mutations';
 import AuthForm from '../components/AuthForm';
-
-const createUser = gql`
-  mutation createUser($input: CreateUserInput!){
-    createUser(input: $input) {
-      token,
-      changedUser {
-        id,
-        username
-      }
-    }
-  }
-`;
 
 const withMutation = graphql(createUser, {
   props: ({ mutate }) => ({
