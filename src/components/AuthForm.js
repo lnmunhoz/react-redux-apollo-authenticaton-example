@@ -13,15 +13,6 @@ const styles = {
     padding: 10,
     outline: 0,
   },
-  submitButton: {
-    fontSize: 14,
-    width: 230,
-    backgroundColor: '#61dafb',
-    border: 0,
-    padding: '10px 0px',
-    color: 'white',
-    fontWeight: 700,
-  },
   successMessage: {
     backgroundColor: 'rgb(251, 161, 97)',
     padding: 10,
@@ -76,7 +67,7 @@ const AuthForm = ({
     <div>
       <button
         type="submit"
-        style={styles.submitButton}
+        className="btn"
       >{submitButtonLabel}
       </button>
     </div>

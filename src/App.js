@@ -16,8 +16,16 @@ const App = ({ token, logout, children }) => (
     <main>
       {token ? (
         <div id="logout">
-          You are authenticated!
-          <button onClick={logout}>Logout</button>
+          <h2>You are authenticated!</h2>
+          <div>
+            <button
+              className="btn"
+              onClick={logout}
+            >
+              Logout
+            </button>
+          </div>
+
         </div>
       ) : (
         <div id="auth">
