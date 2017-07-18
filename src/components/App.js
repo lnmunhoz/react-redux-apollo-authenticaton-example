@@ -1,9 +1,7 @@
 import React from 'react';
-import { connect } from 'react-redux';
-import { logoutUser } from './actions/user';
-import logo from './logo.svg';
+import PropTypes from 'prop-types';
+import logo from '../logo.svg';
 import './App.css';
-
 
 const App = ({ token, logout, children }) => (
   <div className="App">
@@ -36,14 +34,16 @@ const App = ({ token, logout, children }) => (
   </div>
 );
 
-const mapStateToProps = state => ({
-  token: state.user.token,
-});
+App.propTypes = {
+  token: PropTypes.string,
+  logout: PropTypes.func,
+  children: PropTypes.node,
+};
 
-const mapDispatchToProps = dispatch => ({
-  logout() {
-    dispatch(logoutUser());
-  },
-});
+App.defaultProps = {
+  token: null,
+  children: null,
+  logout: () => {},
+};
 
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default App;

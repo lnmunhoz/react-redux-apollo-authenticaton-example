@@ -1,0 +1,56 @@
+/**
+ * General styles
+ */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+main {
+  margin: 20px 0;
+}
+
+.btn {
+  background-color: #5ed0f0;
+  color: white;
+  padding: 10px 15px;
+  font-size: 18px;
+  border: 0;
+  outline: 0;
+  transition: background-color 0.2s ease;
+}
+
+.btn:hover {
+  cursor: pointer;
+  background-color: #61bafb;
+}
+
+/**
+ * create-react-app styles
+ */
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  text-align: center;
+  background-color: #222;
+  height: 170px;
+  padding: 20px;
+  color: white;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
