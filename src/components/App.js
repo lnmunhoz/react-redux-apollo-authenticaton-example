@@ -1,7 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import logo from '../logo.svg';
+import config from '../../config.json';
 import './App.css';
+
+// Check if graphQLServiceUri was set.
+const isConfigSetup = new RegExp('api.scaphold.io').test(config.graphQLServiceUri);
 
 const App = ({ token, logout, children }) => (
   <div className="App">
@@ -10,6 +14,12 @@ const App = ({ token, logout, children }) => (
       <h2>React + Redux + Apollo</h2>
       <h3>Authentication Example</h3>
     </div>
+
+    { !isConfigSetup && (
+      <div className="setup-alert">
+        Please, setup your GraphQL Endpoint on <code>config.json</code> file
+      </div>
+    )}
 
     <main>
       {token ? (

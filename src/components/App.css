@@ -26,6 +26,12 @@ main {
   background-color: #61bafb;
 }
 
+.setup-alert {
+  padding: 10px;
+  background-color: green;
+  color: white;
+}
+
 /**
  * create-react-app styles
  */
